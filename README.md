@@ -1,13 +1,9 @@
 
-
-```
 # Customer Churn Early-Warning System (CX Retention & Churn AI Agent)
 
 A Streamlit dashboard that helps a Customer Success (CS) team identify **which customers are likely to churn**, **why they look risky**, and **what to do next**. It combines structured SaaS signals (usage, subscriptions, churn events, support tickets) with an **optional local LLM** (Ollama) that can read support-ticket text and extract additional signals (summary, category, sentiment, churn intent).
 
 This project is designed for demos and early experimentation: it produces an executive view, churn drivers, a filterable at-risk action list, and a one-ticket “analyze” tool using a **local Ollama LLM**.
-
----
 
 ## Project overview
 
@@ -19,7 +15,6 @@ The “AI agent” part comes from automated decision support:
 - **recommends next actions** (playbook steps),
 - and can use an LLM to **understand ticket language** (e.g., cancellation intent).
 
----
 
 ## Key features
 
@@ -55,7 +50,6 @@ Paste a single ticket and get structured JSON from the local model:
 - churn intent
 - recommended action
 
----
 
 ## Datasets used
 
@@ -78,13 +72,12 @@ Loaded from `data/raw/tickets/` using **Folder mode** (dropdown) or **Upload mod
 This dataset is used only for LLM enrichment (turning unstructured text into structured signals).
 If the ticket file does not contain a real `customer_id`, the app applies a **demo-only random mapping** to customers so the text-to-signal workflow can still be demonstrated.
 
----
+
 
 ## Project structure
 
 Typical layout:
 
-```
 
 customer-churn-early-warning-system/
 app.py
@@ -108,7 +101,7 @@ docs/
 requirements.txt
 README.md
 
-````
+
 
 ### Important files
 - **app.py**  
@@ -120,7 +113,7 @@ README.md
 - **src/agent_logic.py**  
   Rule-based churn risk scoring (`score_customer`).
 
----
+
 
 ## Setup (Windows + PowerShell)
 
